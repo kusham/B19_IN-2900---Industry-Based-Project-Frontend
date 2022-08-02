@@ -47,7 +47,7 @@ export default function Login({ setUser, user }) {
     showPassword: false,
   });
   useEffect(() => {
-    axios.get("http://localhost:8070/countEmployees/").then((res)=>{
+    axios.get("https://hr-and-assets-management.herokuapp.com/countEmployees/").then((res)=>{
       console.log(res.data.counts);
       if(res.data.counts===0)
       {

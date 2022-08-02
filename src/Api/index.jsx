@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:8070",
+  baseURL: "https://hr-and-assets-management.herokuapp.com",
   // headers: {
   //   "Content-Type": "application/json",
   // },
@@ -22,7 +22,7 @@ API.interceptors.request.use(
 );
 
 const refreshTheAccessToken = async () => {
-  const response = await axios.post("http://localhost:8070/refresh", {
+  const response = await axios.post("https://hr-and-assets-management.herokuapp.com/refresh", {
     token: JSON.parse(sessionStorage.getItem("refresh")),
   });
   console.log(response);

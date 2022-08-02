@@ -66,7 +66,7 @@ export default function Signup({ setUser, user }) {
     candidateID:"temporyID", //this is used for only first time
   });
   useEffect(() => {
-    axios.get("http://localhost:8070/countEmployees/").then((res)=>{
+    axios.get("https://hr-and-assets-management.herokuapp.com/countEmployees/").then((res)=>{
       console.log(res.data.counts);
       if(res.data.counts!==0)
       {

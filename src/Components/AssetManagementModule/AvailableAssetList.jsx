@@ -64,14 +64,14 @@ const  AvailableAssetList = ({user}) => {
     useEffect(()=>{
         if(count===0)
         {
-            API.get("http://localhost:8070/assets/available").then((res)=>{
+            API.get("https://hr-and-assets-management.herokuapp.com/assets/available").then((res)=>{
             setAssets(res.data);
             setNumber({available:res.data.length})
             }).catch((err)=>{
                 alert(err.message);
             })
         }else{
-            API.get("http://localhost:8070/assets/available").then((res)=>{
+            API.get("https://hr-and-assets-management.herokuapp.com/assets/available").then((res)=>{
             setNumber({available:res.data.length})
             }).catch((err)=>{
                 alert(err.message);

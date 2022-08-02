@@ -4,7 +4,7 @@ export const LoginApi = async (user) => {
   try {
     const User = { userName: user.userName, password: user.password };
 
-    const {data} = await axios.post("http://localhost:8070/login", User);
+    const {data} = await axios.post("https://hr-and-assets-management.herokuapp.com/login", User);
     console.log(data);
     if (data.success === true) {
       console.log("first")

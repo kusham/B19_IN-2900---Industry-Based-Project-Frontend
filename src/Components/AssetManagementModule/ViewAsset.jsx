@@ -64,7 +64,7 @@ const  ViewAsset = ({user}) => {
        window.location.replace('/');
     }
     useEffect(()=>{
-        API.get("http://localhost:8070/assets/").then((res)=>{
+        API.get("https://hr-and-assets-management.herokuapp.com/assets/").then((res)=>{
             // console.log(res)
             setAssets(res.data.assets);
             setNumber({available:res.data.availableCount,nonAvailable:res.data.nonavblCount,fault:res.data.faultCount})
